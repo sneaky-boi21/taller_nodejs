@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Título de tu página</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/modificar.js"></script>
+    <style>
+    .sidebar {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #1b2366;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href='./insertar.html'>Insertar</a></li>
+            <li><a class="active" href='./modificar.html'>Modificar</a></li>
+            <li><a href='./eliminar.html'>Eliminar</a></li>
+            <li><a href='./busqueda.html'>Búsqueda</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Modificar datos</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <div class="form-group">
+                    <label for="input-id">ID del Empleado</label>
+                    <input type="text" class="form-control" id="input-id" placeholder="INGRESE EL ID">
+                    <small class="form-text text-muted">ID del Empleado a Modificar</small>
+                </div>
+                <h2>Datos a modificar:</h2>
+                <div class="form-group">
+                    <label for="input-name">Nombre</label>
+                    <input type="text" class="form-control" id="input-nombre" placeholder="INSERTE EL NOMBRE">
+                    <small class "form-text text-muted">Nombre del Empleado</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-surname">Apellidos</label>
+                    <input type="text" class="form-control" id="input-apellidos" placeholder="INSERTE EL APELLIDO">
+                    <small class="form-text text-muted">Apellido del Empleado</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-phone">Telefono</label>
+                    <input type="text" class="form-control" id="input-telefono" placeholder="INSERTE EL TELEFONO">
+                    <small class="form-text text-muted">Telefono del Empleado</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="input-correo" placeholder="INSERTE EL CORREO">
+                    <small class="form-text text-muted">Correo Registrado</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-address">Direccion</label>
+                    <input type="text" class="form-control" id="input-direccion" placeholder="INSERTE LA DIRECCION">
+                    <small class="form-text text-muted">Dirección del Empleado</small>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-primary">Modificar</button>
+                    <button class="btn btn-secondary">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

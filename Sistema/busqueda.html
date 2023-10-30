@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busqueda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+    <script src="./js/busqueda.js"></script>
+    <style>
+    .sidebar {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #1b2366;
+        }
+        table {
+            width: 80%; 
+            margin-left: 210px; 
+            margin-right: auto; 
+            margin-bottom: 20px; 
+            border-collapse: collapse; 
+        }
+
+        th, td {
+            border: 1px solid #ddd; 
+            padding: 8px; 
+        }
+
+        th {
+            background-color: #328ec4; 
+            color: white; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+      </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href='./insertar.html'>Insertar</a></li>
+            <li><a href='./modificar.html'>Modificar</a></li>
+            <li><a href='./eliminar.html'>Eliminar</a></li>
+            <li><a class="active" href='./busqueda.html'>Búsqueda</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Buscar Empleados por su Nombre y ID</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <h2>Parámetros de búsqueda:</h2>
+                <div class="form-group">
+                    <label for="input-mail">ID del Empleado</label>
+                    <input type="text" class="form-control" id="input-id" placeholder="INGRESE EL ID">
+                    <small class="form-text text-muted">ID del Empleado a Buscar</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Nombre</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="INGRESE EL NOMBRE">
+                    <small class="form-text text-muted">Nombre del Empleado a Buscar.</small>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-primary">Buscar</button>
+                    <button class="btn btn-secondary">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

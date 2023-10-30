@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+    <script src="./js/insertar.js"></script>
+    <style>
+    .sidebar {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #1b2366;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+    <ul>
+        <li><a class="active" href='./insertar.html'>Insertar</a></li>
+        <li><a href='./modificar.html'>Modificar</a></li>
+        <li><a href='./eliminar.html'>Eliminar</a></li>
+        <li><a href='./busqueda.html'>Búsqueda</a></li>
+      </ul>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Agregar Empleados a la Base de Datos.</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <div class="form-group">
+                    <label for="input-mail">Nombre</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="INGRESE EL NOMBRE">
+                    <small class="form-text text-muted">Nombre del Empleado.</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Apellidos</label>
+                    <input type="text" class="form-control" id="input-surname" placeholder="INGRESE EL APELLIDO">
+                    <small class="form-text text-muted">Apellido del Empleado.</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Telefono</label>
+                    <input type="text" class="form-control" id="input-phone" placeholder="INGRESE EL TELEFONO">
+                    <small class="form-text text-muted">Telefono del Empleado </small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Correo electrónico</label>
+                    <input type="email" class="form-control" id="input-mail" placeholder="INGRESE LA DIRECCION">
+                    <small class="form-text text-muted">Correo del Empleado.</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Direccion</label>
+                    <input type="text" class="form-control" id="input-address" placeholder="INGRESE LA DIRECCION">
+                    <small class="form-text text-muted">Direccion del Empleado</small>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-primary">Agregar</button>
+                    <button class="btn btn-secondary">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
